@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <title>Tugas NLP Sentiment</title>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <div class="col-sm-" align="center">
+                <h1>Word Cloud Generator</h1>
+            </div>
+            <br>
+            <fieldset align="center">
+                <form action = "{{url_for('wordcloud')}}" method ="POST" >
+                    <div class="card card-body" >
+                        <div class="col-sm-5" align="center">
+                            <textarea name="text" placeholder=".............." rows="12" cols="140"></textarea>
+                        </div>
+
+                        <br>
+
+                        <div class="form-group  row">
+                          <div class="col-sm">Background</label>
+                            <select class="form-control" name = "background" required>
+                              <option disabled selected value> -- Select an Option -- </option>
+                              <option value = "Black">Black</option>
+                              <option value = "White">White</option>
+                            </select>
+                          </div>
+
+                          <div class="col-sm">
+                            <label for="count">Count</label>
+                            <input type="number" class="form-control" name="count"  required>
+                          </div>
+
+                          <div class="col-sm">
+                            <label for="height">Height</label>
+                            <input type="number" class="form-control" name="height" required>
+                          </div>
+
+                          <div class="col-sm">
+                            <label for="width">Width</label>
+                            <input type="number" class="form-control" name="width" required>
+                          </div>
+
+                      </div>
+                      
+                      <br>
+                      <div class="form-group row">
+
+                              <div class="col-sm">
+                                <label for="minfontsize">Min Font Size</label>
+                                <input type="number" class="form-control" id="minfontsize" name="minfontsize" required>
+                              </div>
+
+
+                              <div class="col-sm">
+                                <label for="maxfontsize">Max Font Size</label>
+                                <input type="number" class="form-control" id="maxfontsize" name=maxfontsize required>
+                              </div>
+
+                              
+                          </div>
+
+
+                        <br><br>
+
+                        <div class="form-group">
+                            <input class="btn btn-primary" type="submit" style="width:900px;height: 50px;" value="RESULT">
+                        </div>
+
+
+                    </form>
+
+                    </div>
+                </fieldset>
+            </body>
+        </div>
+        </html>
+
+
+
+                        
+                            
+                       
